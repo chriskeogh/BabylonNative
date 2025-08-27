@@ -2,3 +2,13 @@
 .DS_Store
 .vscode
 
+Apps/Playground/Assets/appearances.json
+Apps/Playground/Assets/background-ground-128.png
+Apps/Playground/Assets/face-rig-11-full-opt.glb
+Apps/Playground/Assets/face-rig-11-glasses-opt.glb
+Apps/Playground/Assets/Onboarding_Billboard3b@3x.png
+Apps/Playground/Assets/Onboarding_Billboard3c@3x.png
+Apps/Playground/Assets/Onboarding_Light_Billboard2@3x.png
+Apps/Playground/Assets/Onboarding_Light_Billboard1@3x.png
+Apps/Playground/Assets/san-giuseppe-bridge-64.env
+Apps/Playground/Scripts/experience.js
