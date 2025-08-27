@@ -68,7 +68,7 @@ if(VISIONOS)
     set(DEPLOYMENT_TARGET "1.0" CACHE STRING "")
 elseif(IOS)
     set(PLATFORM "OS64COMBINED" CACHE STRING "")
-    set(DEPLOYMENT_TARGET "13" CACHE STRING "")
+    set(DEPLOYMENT_TARGET "18" CACHE STRING "")
 endif()
 
 project(BabylonNative)

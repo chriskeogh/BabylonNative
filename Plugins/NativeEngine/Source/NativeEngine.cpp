@@ -2009,6 +2009,7 @@ namespace Babylon
         const float g{data.ReadFloat32()};
         const float b{data.ReadFloat32()};
         const float a{data.ReadFloat32()};
+        
         const bool shouldClearDepth{static_cast<bool>(data.ReadUint32())};
         const float depth{data.ReadFloat32()};
         const bool shouldClearStencil{static_cast<bool>(data.ReadUint32())};
@@ -2056,6 +2057,10 @@ namespace Babylon
     void NativeEngine::SetHardwareScalingLevel(const Napi::CallbackInfo& info)
     {
         const auto level = info[0].As<Napi::Number>().FloatValue();
+        
+        /// CJK ignore 0 values to handle hidden windows
+        if (level <= 0) return;
+        
         m_deviceContext.SetHardwareScalingLevel(level);
     }
 

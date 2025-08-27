@@ -479,4 +479,18 @@ namespace Babylon::Graphics
             callback(data);
         }
     }
+
+    //CJK Test hack
+    DeviceStats DeviceImpl::GetStats() const
+    {
+        auto stats = bgfx::getStats();
+        DeviceStats s;
+        s.AllocatedIndexBuffers = stats->numIndexBuffers;
+        s.AllocatedVertexBuffers = stats->numVertexBuffers;
+        s.AllocatedShaderPrograms = stats->numPrograms;
+        s.UsedMemBytes = stats->gpuMemoryUsed;
+        s.NumDraw = stats->numDraw;
+        
+        return s;
+    }
 }

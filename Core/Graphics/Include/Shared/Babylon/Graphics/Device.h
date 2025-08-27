@@ -69,6 +69,16 @@ namespace Babylon::Graphics
 
     class DeviceImpl;
 
+    //CJK Test hack
+    struct DeviceStats
+    {
+        long long UsedMemBytes;
+        int AllocatedVertexBuffers;
+        int AllocatedIndexBuffers;
+        int AllocatedShaderPrograms;
+        int NumDraw;
+    };
+
     class Device
     {
     public:
@@ -109,6 +119,9 @@ namespace Babylon::Graphics
         float GetDevicePixelRatio() const;
 
         PlatformInfo GetPlatformInfo() const;
+        
+        //CJK Test hack
+        DeviceStats GetStats() const;
 
     private:
         std::unique_ptr<DeviceImpl> m_impl{};

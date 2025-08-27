@@ -71,7 +71,7 @@ namespace Babylon::Graphics
                 guarantor.RequestClose();
             }};
     }
-
+    
     void Device::StartRenderingCurrentFrame()
     {
         m_impl->StartRenderingCurrentFrame();
@@ -106,4 +106,11 @@ namespace Babylon::Graphics
     {
         return m_impl->GetPlatformInfo();
     }
+
+    //CJK Test hack
+    DeviceStats Device::GetStats() const
+    {
+        return m_impl->GetStats();
+    }
+
 }

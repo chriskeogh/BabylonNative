@@ -31,8 +31,9 @@ if(APPLE)
         set(ADDITIONAL_LIBRARIES PRIVATE z NativeXr)
         set(SOURCES
             ${SOURCES}
-            "iOS/AppDelegate.swift"
-            "iOS/ViewController.swift"
+            "iOS/SwiftLumiApp.swift"
+            "iOS/MetalView.swift"
+            "iOS/ContentView.swift"
             "iOS/LibNativeBridge.h"
             "iOS/LibNativeBridge.mm"
             "AppleShared/GestureRecognizer.swift")

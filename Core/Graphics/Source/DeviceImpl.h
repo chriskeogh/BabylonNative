@@ -69,7 +69,10 @@ namespace Babylon::Graphics
         float GetDevicePixelRatio() const;
 
         PlatformInfo GetPlatformInfo() const;
-
+        
+        //CJK Test hack
+        DeviceStats GetStats() const;
+        
         uintptr_t GetId() const;
 
         /* ********** END DEVICE CONTRACT ********** */
