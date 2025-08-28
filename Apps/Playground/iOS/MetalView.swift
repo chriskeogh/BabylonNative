@@ -79,8 +79,8 @@ class LumiBabylonRenderer : NSObject, MTKViewDelegate {
     func mtkView(_ view: MTKView, drawableSizeWillChange size: CGSize) {
         
         let screenScale = view.contentScaleFactor
-        let width : Int32 = Int32(size.width * screenScale)
-        let height : Int32 = Int32(size.height * screenScale)
+        let width : Int32 = Int32(size.width) //* screenScale)
+        let height : Int32 = Int32(size.height) // * screenScale)
         debugPrint("resize: w:\(width) h:\(height) scale:\(screenScale), on \(view)")
         self.parent.babylonLumi.resize( view, width: width, height: height );
     }
