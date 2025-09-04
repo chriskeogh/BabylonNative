@@ -12,7 +12,9 @@ import SwiftUI
 struct SwiftLumiApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            if #available(iOS 18, *) {
+                ContentView()
+            }
         }
     }
 }

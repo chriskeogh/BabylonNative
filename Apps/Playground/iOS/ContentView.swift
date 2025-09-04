@@ -29,6 +29,7 @@ extension TimeInterval{
     }
 }
 
+@available(iOS 18, *)
 struct ContentView: View {
     
     @Observable
@@ -121,6 +122,9 @@ struct ContentView: View {
     }
 }
 
+
 #Preview {
-    ContentView()
+    if #available(iOS 18, *) {
+        ContentView()
+    }
 }
