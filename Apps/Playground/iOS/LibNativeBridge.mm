@@ -12,6 +12,8 @@
 #import <Babylon/Polyfills/Console.h>
 #import <Babylon/Polyfills/Window.h>
 #import <Babylon/Polyfills/XMLHttpRequest.h>
+#import <Babylon/Polyfills/URL.h>
+#import <Babylon/ShaderCache.h>
 #import <Babylon/ShaderCache.h>
 #import <Babylon/DebugTrace.h>
 #import <optional>
@@ -187,6 +189,8 @@ pthread_mutex_t engineReadyMutex;
             Babylon::Polyfills::Window::Initialize(env);
             
             Babylon::Polyfills::XMLHttpRequest::Initialize(env);
+            
+            Babylon::Polyfills::URL::Initialize(env);
             
             Babylon::Plugins::NativeCamera::Initialize(env);
             

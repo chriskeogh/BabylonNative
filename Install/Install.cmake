@@ -182,3 +182,8 @@ if(TARGET XMLHttpRequest)
     install_targets(XMLHttpRequest)
     install_include_for_targets(XMLHttpRequest)
 endif()
+
+if(TARGET URL)
+    install_targets(URL)
+    install_include_for_targets(URL)
+endif()
